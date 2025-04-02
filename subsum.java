@@ -20,6 +20,7 @@ public class Main {
                     sum += arr[k]; 
                 }
                 System.out.println();
+                System.out.println(sum);
                 totalsum += sum;
             }
         }
