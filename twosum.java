@@ -1,22 +1,16 @@
-import java.util.*;
-
-public class Main
-{
-	public static void main(String[] args) {
-		Scanner sc=new Scanner(System.in);
-		int n=sc.nextInt();
-		int arr[]=new int[n];
-		for(int i=0;i<n;i++){
-		    arr[i]=sc.nextInt();
-		}
-		int sum=sc.nextInt();
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = i + 1; j < arr.length; j++) {
-                if (arr[i] + arr[j] == sum) {
-                    System.out.println("(" + arr[i] + ", " + arr[j] + ")");
-                    System.out.println(i+" "+j+" ");
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        int n=nums.length;
+        int res1=0;
+        int res2=0;
+        for(int i=0;i<n;i++){
+            for(int j=i+1;j<n;j++){
+                if(nums[i]+nums[j]==target){
+                    res1=i;
+                    res2=j;
                 }
             }
         }
-	}
+        return new int[] {res1,res2};
+    }
 }
